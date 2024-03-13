@@ -12,8 +12,6 @@ test.beforeEach(async ({ page }) => {
 test('test checkers - capture and reset', async ({ page }) => {
   const checkersPage = new CheckersPage(page);
 
-  await page.pause();
-
   await checkersPage.softMovePiece(0, 2, 1, 3);
   await checkersPage.confirmOpponentMove(1, 5, 2, 4);
 
